@@ -13,4 +13,13 @@ public class Person {
     private String voornaam;
     private String achternaam;
     private Address address;
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "voornaam='" + voornaam + '\'' +
+                ", achternaam='" + achternaam + '\'' +
+                ", address=" + address +
+                '}';
+    }
 }

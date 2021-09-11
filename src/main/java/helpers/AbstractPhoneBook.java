@@ -32,7 +32,7 @@ public abstract class AbstractPhoneBook {
             BufferedReader br = new BufferedReader(fr);
             String line = "";
             String[] tempArr;
-            int count = 1;
+            int count = 0;
             while ((line = br.readLine())!= null && count < amountOfPeople) {
                 tempArr = line.split(";");
                 Address address = new Address(tempArr[2], tempArr[3], tempArr[4], tempArr[5], tempArr[6], tempArr[7]);
@@ -70,6 +70,7 @@ public abstract class AbstractPhoneBook {
 
     public abstract void quickSort();
 
+    public abstract boolean isSorted();
 
 
 }
