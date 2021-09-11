@@ -13,5 +13,4 @@ public class Person {
     private String voornaam;
     private String achternaam;
     private Address address;
-    private String telefoonNummer;
 }
