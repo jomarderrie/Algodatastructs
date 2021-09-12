@@ -86,27 +86,12 @@ public class PhoneBook extends AbstractPhoneBook {
 
     @Override
     public void selectionSort() {
-//        Collections.sort(super.persons, new Comparator<Person>() {
-//            @Override
-//            public int compare(Person o1, Person o2) {
-//                return o1.getVoornaam().compareTo(o2.getVoornaam());
-//            }
-//        });
-//        for (int i = 1; i < persons.size(); i++) {
-//            int j = i;
-//            while (j != 0) {
-//                if (persons.get(i).getVoornaam().compareTo(persons.get(j-1).getVoornaam()) < 0) {
-//                    Person temp = persons.get(j);
-//                    persons.set(j, persons.get(i));
-//                    persons.set(i, temp);
-//                }
-//                j--;
-//            }
-//        }
+
         int index = 1;
         while (index<persons.size()){
             for (int i = index; i >0; i--) {
                 if (persons.get(i).getVoornaam().compareTo(persons.get(i-1).getVoornaam()) < 0){
+
                     Person temp = persons.get(i-1);
                     persons.set(i-1, persons.get(i));
                     persons.set(i, temp);
