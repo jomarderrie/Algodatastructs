@@ -104,7 +104,6 @@ public class PhoneBook extends AbstractPhoneBook {
 
     @Override
     public void insertionSort() {
-
         int index = 1;
         while (index < persons.size()) {
             int loopIndex = index;
@@ -124,11 +123,21 @@ public class PhoneBook extends AbstractPhoneBook {
 
     @Override
     public void mergeSort() {
+        int begin = 0;
+        int end = persons.size();
+        int middle;
+        int leftHalf;
 
+        if (begin < end) {
+            middle = (begin + end) / 2;
+             mergeSort();
+
+        }
     }
 
     @Override
     public void quickSort() {
+        String pivot = persons.get(0).getVoornaam();
 
     }
 
