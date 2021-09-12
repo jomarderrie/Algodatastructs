@@ -88,12 +88,12 @@ public class PhoneBook extends AbstractPhoneBook {
     public void selectionSort() {
 
         int index = 1;
-        while (index<persons.size()){
-            for (int i = index; i >0; i--) {
-                if (persons.get(i).getVoornaam().compareTo(persons.get(i-1).getVoornaam()) < 0){
+        while (index < persons.size()) {
+            for (int i = index; i > 0; i--) {
+                if (persons.get(i).getVoornaam().compareTo(persons.get(i - 1).getVoornaam()) < 0) {
 
-                    Person temp = persons.get(i-1);
-                    persons.set(i-1, persons.get(i));
+                    Person temp = persons.get(i - 1);
+                    persons.set(i - 1, persons.get(i));
                     persons.set(i, temp);
                 }
             }
@@ -105,6 +105,21 @@ public class PhoneBook extends AbstractPhoneBook {
     @Override
     public void insertionSort() {
 
+        int index = 1;
+        while (index < persons.size()) {
+            int loopIndex = index;
+            Person temp;
+            while (loopIndex != 0) {
+                if (!(persons.get(loopIndex).getVoornaam().compareTo(persons.get(loopIndex - 1).getVoornaam()) < 0)) {
+                    loopIndex--;
+                } else {
+                    temp = persons.get(loopIndex - 1);
+                    persons.set(index - 1, persons.get(index));
+                    persons.set(index, temp);
+                }
+            }
+            index++;
+        }
     }
 
     @Override
